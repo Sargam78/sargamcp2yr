@@ -1,0 +1,24 @@
+LEETCODE PROBLEM -Single number
+Approaches-
+1)Using NESTED LOOP ,TC-O(n^2)
+2)using Sorting ,TC-O(nlogn)
+3)Using XOR ,TC-O(n)
+
+INTUITION IS-xor of all elements will cancel out all pairing elements to 0 and 
+
+CODE FOR OPTIMAL SOLUTION--
+-------------------------------------------------------------------
+class Solution {
+    public:
+
+    int singleNumber(vector<int>& nums)
+    {
+        int ans=0;
+        for(int i=0;i<nums.size();i++)
+        {
+            ans=ans^nums[i];
+        }
+        return ans;
+    }
+};
+--------------------------------------------------------------------
